@@ -28,6 +28,12 @@ let draws = 0;
 
 // set event listeners
 buttonEl.addEventListener('click', () => {
+	const computerChoice = getRandomThrow();
+
+	const selectedInputEl = document.querySelector('input:checked');
+
+	const userwon = didUserWin(selectedInputEl.value, computerChoice);
+	console.log(userwon);
 	// get user input
 	// use user input to update state
 	// update DOM to reflect the new state

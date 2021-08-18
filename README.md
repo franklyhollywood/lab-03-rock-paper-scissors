@@ -24,4 +24,5 @@ computer throw
 
 #EVENTS
 User clicks button to play game
+figure out what user threw / figure out what computer threw / then decide who won
 spans update to display information: Win / lose / draw / Total wins / total loses / total draws / computer throw

@@ -1,5 +1,5 @@
 export function getRandomThrow() {
-	let randomNumber = Math.ceil(Math.randomNumber() * 3);
+	let randomNumber = Math.ceil(Math.random() * 3);
 	if (randomNumber === 1) {
 		return 'rock';
 	} else if (randomNumber === 2) {
@@ -9,27 +9,35 @@ export function getRandomThrow() {
 	}
 }
 
-
 export function didUserWin(playerChoice, computerChoice) {
-    if (playerChoice === computerChoice) {
-        return 'draw';
-    } if playerChoice === 'rock' && computerChoice === 'scissors') {
-        return 'Player wins!';
-    } if playerChoice === 'rock' && computerChoice === 'paper') {
-        return 'Computer wins!';
-    } if playerChoice === 'rock' && computerChoice === 'rock') {
-        return 'Draw!';
-    } if playerChoice === 'paper' && computerChoice === 'scissors') {
-        return 'Computer wins!';
-    } if playerChoice === 'paper' && computerChoice === 'papaer') {
-        return 'Draw!';
-    } if playerChoice === 'paper' && computerChoice === 'rock') {
-        return 'Player wins!'
-    } if playerChoice === 'scissors' && computerChoice === 'scissors') {
-        return 'Draw!';
-    } if playerChoice === 'scissors' && computerChoice === 'paper') {
-        return 'Player wins!'
-    } if playerChoice === 'scissors' && computerChoice === 'rock') {
-        return 'Computer wins!';
-    }
-};
+	if (playerChoice === computerChoice) {
+		return 'Draw!';
+	}
+	if (playerChoice === 'rock' && computerChoice === 'scissors') {
+		return 'Win!';
+	}
+	if (playerChoice === 'rock' && computerChoice === 'paper') {
+		return 'Loose!';
+	}
+	if (playerChoice === 'rock' && computerChoice === 'rock') {
+		return 'Draw!';
+	}
+	if (playerChoice === 'paper' && computerChoice === 'scissors') {
+		return 'Loose!';
+	}
+	if (playerChoice === 'paper' && computerChoice === 'paper') {
+		return 'Draw!';
+	}
+	if (playerChoice === 'paper' && computerChoice === 'rock') {
+		return 'Win!';
+	}
+	if (playerChoice === 'scissors' && computerChoice === 'scissors') {
+		return 'Draw!';
+	}
+	if (playerChoice === 'scissors' && computerChoice === 'paper') {
+		return 'Win!';
+	}
+	if (playerChoice === 'scissors' && computerChoice === 'rock') {
+		return 'Loose!';
+	}
+}
