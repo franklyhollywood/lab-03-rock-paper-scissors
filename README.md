@@ -14,13 +14,14 @@
 3 (Radio buttons) images (selectable) Rock, Paper, Scissors
 Submit button
 Instructions for game
-Spans for: Wins / losses / draw / computer throw /
+Spans for: Wins / losses / draw / computer throw / total loses / total wins / total draws
 
 #STATE
 wins
 loses
 draws
+computer throw
 
 #EVENTS
 User clicks button to play game
-spans update to display information: Win / lose / draw / Total wins / total loses
+spans update to display information: Win / lose / draw / Total wins / total loses / total draws / computer throw
