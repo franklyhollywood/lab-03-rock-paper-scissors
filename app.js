@@ -6,7 +6,7 @@ const winEl = document.querySelector('#win');
 const looseEl = document.querySelector('#loose');
 const drawEl = document.querySelector('#draw');
 const totalWinEl = document.querySelector('#totalWin');
-const totalLooseEl = document.querySelector('#totalLost');
+const totalLoseEl = document.querySelector('#totalLost');
 const totalDrawEl = document.querySelector('#totalDraw');
 const computerThrow = document.querySelector('#computer-throw');
 
@@ -34,9 +34,20 @@ buttonEl.addEventListener('click', () => {
 
 	const userWon = didUserWin(selectedInputEl.value, computerChoice);
 
-	if (userWon) {
+	if (userWon === 'win') {
 		wins++;
+		winEl.textContent = 'You won!';
+	} else if (userWon === 'lose') {
+		losses++;
+		looseEl.textContent = 'You Lose!';
+	} else {
+		draws++;
+		drawEl.textContent = 'Draw!';
 	}
+
+	totalDrawEl.textContent = draws;
+	totalWinEl.textContent = wins;
+	totalLoseEl.textContent = losses;
 
 	// get user input
 	// use user input to update state
