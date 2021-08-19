@@ -30,6 +30,8 @@ let draws = 0;
 buttonEl.addEventListener('click', () => {
 	const computerChoice = getRandomThrow();
 
+	computerThrow.textContent = `The computer threw: ${computerChoice}`;
+
 	const selectedInputEl = document.querySelector('input:checked');
 
 	const userWon = didUserWin(selectedInputEl.value, computerChoice);
@@ -42,14 +44,17 @@ buttonEl.addEventListener('click', () => {
 		looseEl.textContent = 'You Lose!';
 	} else {
 		draws++;
-		drawEl.textContent = 'Draw!';
+		drawEl.textContent = `It's a Draw!`;
 	}
 
-	totalDrawEl.textContent = draws;
-	totalWinEl.textContent = wins;
-	totalLoseEl.textContent = losses;
+	totalDrawEl.textContent = `total draws ${draws}`;
+	totalWinEl.textContent = `total wins ${wins}`;
+	totalLoseEl.textContent = `total losses ${losses}`;
 
 	// get user input
 	// use user input to update state
 	// update DOM to reflect the new state
 });
+
+//TO do:  Clear you won, you lose message each time we run the game.
+//To do:  Make sure that when you hit submit with nothing selected that you throw a prompt
