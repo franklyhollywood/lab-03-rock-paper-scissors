@@ -1,6 +1,6 @@
 // import functions and grab DOM elements
-import { getRandomThrow, didUserWin } from './get-random-throw.js';
-
+import { getRandomThrow } from './get-random-throw.js';
+import { didUserWin } from './utils.js';
 const buttonEl = document.querySelector('#submit');
 const winEl = document.querySelector('#win');
 const looseEl = document.querySelector('#loose');
@@ -32,8 +32,12 @@ buttonEl.addEventListener('click', () => {
 
 	const selectedInputEl = document.querySelector('input:checked');
 
-	const userwon = didUserWin(selectedInputEl.value, computerChoice);
-	console.log(userwon);
+	const userWon = didUserWin(selectedInputEl.value, computerChoice);
+
+	if (userWon) {
+		wins++;
+	}
+
 	// get user input
 	// use user input to update state
 	// update DOM to reflect the new state
