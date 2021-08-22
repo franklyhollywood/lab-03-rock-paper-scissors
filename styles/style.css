@@ -124,3 +124,7 @@ input:checked + img {
 	border: solid 5px hotpink;
 	border-radius: 5px;
 }
+
+#resetButton {
+	margin-top: 15px;
+}

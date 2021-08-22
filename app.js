@@ -6,8 +6,8 @@ const totalWinEl = document.querySelector('#totalWin');
 const totalLoseEl = document.querySelector('#totalLost');
 const totalDrawEl = document.querySelector('#totalDraw');
 const computerThrow = document.querySelector('#computer-throw');
-const winLoseDraw = document.querySelector('#winlosedraw');
-const resetButton = document.querySelector('#resetbutton');
+const winLoseDraw = document.querySelector('#winLoseDraw');
+const resetButton = document.querySelector('#resetButton');
 
 // console.log(
 // 	buttonEl,
